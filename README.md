@@ -9,3 +9,5 @@ pyrcc5 mvc_app.qrc -o ..\mvc_app_rc.py
 ```
 
 https://stackoverflow.com/questions/26698628/mvc-design-with-qt-designer-and-pyqt-pyside
+
+![alt text](https://image.slidesharecdn.com/3-mivsek-mvc-esug13-130912030122-phpapp01/95/mvc-revivial-on-the-web-4-638.jpg?cb=1378954920 "Logo Title Text 1")
