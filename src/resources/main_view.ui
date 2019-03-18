@@ -6,27 +6,79 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>93</width>
-    <height>86</height>
+    <width>301</width>
+    <height>249</height>
    </rect>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout">
     <item>
-     <widget class="QSpinBox" name="spinBox_amount"/>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QListWidget" name="listWidget_names"/>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_name">
+        <property name="text">
+         <string>asdsa</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pushButton_add">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_delete">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Delete</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QSpinBox" name="spinBox_amount"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_reset">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Reset</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QLabel" name="label_even_odd"/>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_reset">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="text">
-       <string>Reset</string>
-      </property>
-     </widget>
     </item>
    </layout>
   </widget>

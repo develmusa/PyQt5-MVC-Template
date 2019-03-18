@@ -2,9 +2,25 @@ from PyQt5.QtCore import QObject, pyqtSignal
 
 
 class Model(QObject):
+
     amount_changed = pyqtSignal(int)
     even_odd_changed = pyqtSignal(str)
     enable_reset_changed = pyqtSignal(bool)
+    user_added = pyqtSignal(str)
+    del_user = pyqtSignal(str)
+
+    @property
+    def users(self):
+        return self._users
+
+
+    def add_user(self, value):
+        self._users.append(value)
+        self.user_added.emit(value)
+
+    def delete_user(self, value):
+        self._users.remove(value)
+        self.del_user(value)
 
     @property
     def amount(self):
@@ -39,3 +55,5 @@ class Model(QObject):
         self._amount = 0
         self._even_odd = ''
         self._enable_reset = False
+
+        self._users = ["hans"]

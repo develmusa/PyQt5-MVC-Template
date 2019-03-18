@@ -17,3 +17,10 @@ class MainController(QObject):
 
         # calculate button enabled state
         self._model.enable_reset = True if value else False
+
+    @pyqtSlot(str)
+    def add_user(self, value):
+        self._model.add_user(value)
+        # calculate button enabled state
+        #if(self._model.users.count > 0):
+        #    self._model.enable_del_user = True if value else False

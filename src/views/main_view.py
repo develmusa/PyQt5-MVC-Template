@@ -16,7 +16,10 @@ class MainView(QMainWindow):
         # if ui changes, it sends a signal to an slot on which we connect a controller class.
         # therefore we can recive the signal in the controller
         self._ui.spinBox_amount.valueChanged.connect(self._main_controller.change_amount)
+        # Lambda to execute function with value
         self._ui.pushButton_reset.clicked.connect(lambda: self._main_controller.change_amount(0))
+
+        self._ui.pushButton_add.clicked.connect(lambda: self._main_controller.add_user(self._ui.lineEdit_name.text()))
 
         # listen for model event signals
         # connect the method to update the ui to the slots of the model
@@ -24,6 +27,8 @@ class MainView(QMainWindow):
         self._model.amount_changed.connect(self.on_amount_changed)
         self._model.even_odd_changed.connect(self.on_even_odd_changed)
         self._model.enable_reset_changed.connect(self.on_enable_reset_changed)
+
+        self._model.user_added.connect(self.on_list_changed)
 
         # set a default value
         self._main_controller.change_amount(42)
@@ -39,3 +44,7 @@ class MainView(QMainWindow):
     @pyqtSlot(bool)
     def on_enable_reset_changed(self, value):
         self._ui.pushButton_reset.setEnabled(value)
+    
+    @pyqtSlot(str)
+    def on_list_changed(self, value):
+        self._ui.listWidget_names.addItem(value)
