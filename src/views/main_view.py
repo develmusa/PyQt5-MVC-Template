@@ -12,11 +12,15 @@ class MainView(QMainWindow):
         self._ui = Ui_MainWindow()
         self._ui.setupUi(self)
 
-        # connect widgets to controller
+        # connect ui-widget to controller
+        # if ui changes, it sends a signal to an slot on which we connect a controller class.
+        # therefore we can recive the signal in the controller
         self._ui.spinBox_amount.valueChanged.connect(self._main_controller.change_amount)
         self._ui.pushButton_reset.clicked.connect(lambda: self._main_controller.change_amount(0))
 
         # listen for model event signals
+        # connect the method to update the ui to the slots of the model
+        # if model sends/emits a signal the ui gets notified
         self._model.amount_changed.connect(self.on_amount_changed)
         self._model.even_odd_changed.connect(self.on_even_odd_changed)
         self._model.enable_reset_changed.connect(self.on_enable_reset_changed)

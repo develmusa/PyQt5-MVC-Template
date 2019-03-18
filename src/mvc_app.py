@@ -8,6 +8,7 @@ from views.main_view import MainView
 class App(QApplication):
     def __init__(self, sys_argv):
         super(App, self).__init__(sys_argv)
+        # Connect everything together
         self.model = Model()
         self.main_ctrl = MainController(self.model)
         self.main_view = MainView(self.model, self.main_ctrl)

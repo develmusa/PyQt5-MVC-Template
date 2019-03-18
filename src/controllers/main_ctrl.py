@@ -7,6 +7,7 @@ class MainController(QObject):
 
         self._model = model
 
+    # Takes Signal from UI
     @pyqtSlot(int)
     def change_amount(self, value):
         self._model.amount = value
