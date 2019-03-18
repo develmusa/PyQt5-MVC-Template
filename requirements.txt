@@ -1,0 +1,10 @@
+pytest
+PyQt5
+
+#Testing
+pytest-cov
+pytest-qt
+# GUI for testing
+pytest-xvfb
+pytest
+codecov

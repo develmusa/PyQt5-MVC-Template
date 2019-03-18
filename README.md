@@ -1,0 +1,2 @@
+[![Build Status](https://travis-ci.com/develmusa/PythonTemplateProject.svg?branch=master)](https://travis-ci.com/develmusa/PythonTemplateProject)
+[![codecov](https://codecov.io/gh/develmusa/PythonTemplateProject/branch/master/graph/badge.svg)](https://codecov.io/gh/develmusa/PythonTemplateProject)
