@@ -6,8 +6,7 @@ class Model(QObject):
     amount_changed = pyqtSignal(int)
     even_odd_changed = pyqtSignal(str)
     enable_reset_changed = pyqtSignal(bool)
-    user_added = pyqtSignal(str)
-    del_user = pyqtSignal(str)
+    users_changed = pyqtSignal(list)
 
     @property
     def users(self):
@@ -16,11 +15,11 @@ class Model(QObject):
 
     def add_user(self, value):
         self._users.append(value)
-        self.user_added.emit(value)
+        self.users_changed.emit(self._users)
 
     def delete_user(self, value):
-        self._users.remove(value)
-        self.del_user(value)
+        del self._users[value]
+        self.users_changed.emit(self._users)
 
     @property
     def amount(self):

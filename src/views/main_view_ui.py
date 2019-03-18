@@ -30,7 +30,7 @@ class Ui_MainWindow(object):
         self.pushButton_add.setObjectName("pushButton_add")
         self.horizontalLayout_2.addWidget(self.pushButton_add)
         self.pushButton_delete = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_delete.setEnabled(False)
+        self.pushButton_delete.setEnabled(True)
         self.pushButton_delete.setObjectName("pushButton_delete")
         self.horizontalLayout_2.addWidget(self.pushButton_delete)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
