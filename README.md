@@ -9,3 +9,5 @@ pyrcc5 mvc_app.qrc -o ..\mvc_app_rc.py
 ```
 
 https://stackoverflow.com/questions/26698628/mvc-design-with-qt-designer-and-pyqt-pyside
+
+https://www.google.com/url?sa=i&source=imgres&cd=&ved=2ahUKEwid6-fczYvhAhXQ66QKHTrjA2IQjRx6BAgBEAU&url=https%3A%2F%2Fwww.slideshare.net%2Fesug%2F3-mivsekmvcesug13&psig=AOvVaw21FK-fjvBJFpIeHySV_UcP&ust=1552995639028547
