@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/develmusa/PythonTemplateProject/branch/master/graph/badge.svg)](https://codecov.io/gh/develmusa/PythonTemplateProject)
 
 1. Install Dependencies: ```pip3 install -r requirements.txt```
-2. Start App: ```python3 src/mvc_app.py
+2. Start App: ```python3 src/mvc_app.py```
 
 Convert QT-Creatorfile to Pythonfile
 ```bash
