@@ -6,7 +6,6 @@
 
 Convert QT-Creatorfile to Pythonfile
 ```bash
-C:\OSGeo4W64\bin\nircmd.exe
 pyuic5 .\src\resources\main_view.ui -o .\src\views\main_view_ui.py
 pyrcc5 mvc_app.qrc -o ..\mvc_app_rc.py
 ```
