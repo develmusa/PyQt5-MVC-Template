@@ -1,4 +1,6 @@
-:warning: Outdated
+# PyQt5-MVC-Template
+
+:warning: Template is Outdated and needs rework
 
 ## Usage
 1. Install Dependencies: ```pip3 install -r requirements.txt```
